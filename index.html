@@ -359,6 +359,149 @@
         justify-content: center;
       }
     }
+    
+/* MY PROJECTS SECTION */
+
+.project-label {
+    display: inline-block;
+    color: #22c55e;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.project-intro {
+    color: #94a3b8;
+    max-width: 650px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #22c55e;
+    box-shadow: 0 15px 35px rgba(34,197,94,0.15);
+}
+
+.project-image {
+    height: 230px;
+    overflow: hidden;
+    background: #1e293b;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-number {
+    color: #22c55e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.project-content h3 {
+    font-size: 22px;
+    margin: 13px 0;
+}
+
+.project-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.tech-stack span {
+    background: rgba(34,197,94,0.1);
+    color: #86efac;
+    border: 1px solid rgba(34,197,94,0.2);
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.project-status {
+    display: inline-block;
+    color: #cbd5e1;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+    width: 100%;
+}
+
+.project-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+}
+
+.project-placeholder i {
+    font-size: 65px;
+    color: #22c55e;
+}
+
+.project-placeholder span {
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.helpdesk {
+    background: linear-gradient(135deg, #0f172a, #164e63);
+}
+
+.fitness {
+    background: linear-gradient(135deg, #312e81, #831843);
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}
+
   </style>
 </head>
 <body>
@@ -445,22 +588,126 @@
       <div class="skill">System Design</div>
       <div class="skill">Problem Solving</div>
       <div class="skill">Team Collaboration</div>
+      <li><a href="#projects">My Work</a></li>
     </div>
   </section>
   
-<!-- My Projects Section -->
+
+<!-- MY WORK / PROJECTS SECTION -->
 <section id="projects" class="projects">
-    <div class="section-heading">
-        <span>MY WORK</span>
+
+    <div class="section-title">
+        <span class="project-label">MY WORK</span>
         <h2>Projects I've Built</h2>
-        <p>
-            Here are some of the projects I've worked on,
-            showcasing my creativity, technical skills
-            and passion for solving real-world problems.
+        <div class="line"></div>
+        <p class="project-intro">
+            A collection of projects showcasing my technical
+            skills, creativity and passion for building
+            practical digital solutions.
         </p>
     </div>
 
-    <div class="project-container
+    <div class="project-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.openai.com/static-rsc-4/kub_vXhAYZD1lri0tAsIG-7netNzTBqn53GYS1HWxb1IJbuc4bHTT7jn6va8lk5sCC5fxaSiLJZAi5QcmQoEZ7JVBtDlaIIu_qNtVg8V0tjLmi4NmQXwS_K8AfklNGS-_hDtzo48C4QfmmN_NlDo6BLEru5xjUU0dvwSwqJzaIA?purpose=inline"
+                     alt="Cyber Productivity Hub dashboard">
+            </div>
+            <div class="project-content">
+                <span class="project-number">01 / WEB DEVELOPMENT</span>
+                <h3>Cyber Productivity Hub</h3>
+                <p>
+                    A web-based productivity platform designed
+                    to help users organise tasks, improve
+                    productivity and access useful digital tools.
+                </p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>TanStack Start</span>
+                </div>
+                <span class="project-status">Personal Project</span>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="https://images.openai.com/static-rsc-4/y9orC5gtfcW_IeCPdZ4NcAZXak4ng77SDYmL1Je8fkxthyAad5xTwYTgOt_tV_Avl2nbkU5iXlRAB2ZP8eE1TtEq1QxpehR8B5bTzJSqIh3yyhowIJfLFSA02cWx6qYGwV9EJykbtsxQfEOW0_udv_Wqer3APy4_5BwBywx-n3Q?purpose=inline"
+                     alt="Menstrual cycle tracker application">
+            </div>
+            <div class="project-content">
+                <span class="project-number">02 / WEB APPLICATION</span>
+                <h3>Menstrual Cycle Tracker</h3>
+                <p>
+                    A personal cycle-tracking application that
+                    helps users record periods, monitor cycle
+                    dates, track symptoms and receive reminders.
+                </p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <span class="project-status">Personal Project</span>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <div class="project-image project-placeholder helpdesk">
+                <i class="fa-solid fa-headset"></i>
+                <span>IT SUPPORT SYSTEM</span>
+            </div>
+            <div class="project-content">
+                <span class="project-number">03 / IT SUPPORT</span>
+                <h3>TCM Helpdesk & Ticketing System</h3>
+                <p>
+                    An IT support management application concept
+                    designed to allow customers to submit tickets,
+                    track technical issues and communicate
+                    with support teams.
+                </p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Database</span>
+                </div>
+                <span class="project-status">Development Concept</span>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <div class="project-image project-placeholder fitness">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>AI FITNESS ASSISTANT</span>
+            </div>
+            <div class="project-content">
+                <span class="project-number">04 / ARTIFICIAL INTELLIGENCE</span>
+                <h3>CyberGirl Fitness AI Assistant</h3>
+                <p>
+                    An AI-powered assistant concept designed
+                    to provide fitness support, summarise
+                    meeting notes and assist with research.
+                </p>
+                <div class="tech-stack">
+                    <span>AI</span>
+                    <span>JavaScript</span>
+                    <span>Web Development</span>
+                    <span>Prompt Engineering</span>
+                </div>
+                <span class="project-status">AI Project Concept</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
   <section id="services">
     <div class="section-title">
